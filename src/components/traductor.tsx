@@ -19,7 +19,7 @@ const Traductor: React.FC = () => {
                 text: inputValue
             })
             .then((response: any) => {
-                setRespuesta(response.translations[0])
+                setRespuesta(response[0].translations)
                 console.log(respuesta)
             });
     };
