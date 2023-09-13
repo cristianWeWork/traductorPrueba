@@ -20,6 +20,7 @@ const Traductor: React.FC = () => {
             })
             .then((response: any) => {
                 setRespuesta(response.translations[0])
+                console.log(respuesta)
             });
     };
 
@@ -46,7 +47,7 @@ const Traductor: React.FC = () => {
                         <div className="mt-3">
                             <h3>Respuesta:</h3>
                             <div className="border p-3">{
-                                respuesta ? respuesta[0]?.map((translate: any) => {
+                                respuesta ? respuesta?.map((translate: any) => {
                                     return <div>
                                         <p>En {translate.to} : {translate.text}</p>
                                     </div>
