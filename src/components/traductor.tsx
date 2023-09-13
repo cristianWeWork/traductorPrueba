@@ -45,8 +45,9 @@ const Traductor: React.FC = () => {
                     <Col>
                         <div className="mt-3">
                             <h3>Respuesta:</h3>
-                            <div className="border p-3">{respuesta?.map( (translate:any) =>{
-                                <div>
+                            <div className="border p-3">{
+                            respuesta?.map( (translate:any) => {
+                                return <div>
                                     <p>En {translate.to} : {translate.text}</p> 
                                 </div>
                             })}</div>
