@@ -13,13 +13,14 @@ const Traductor: React.FC = () => {
         setInputValue(event.target.value);
     };
 
-    const handleEnviarClick = () => {
-        axios
+    const handleEnviarClick = async () => {
+        await axios
             .post(TraductorUrl, {
                 text: inputValue
             })
             .then((response: any) => {
-                setRespuesta(response[0])
+                setRespuesta(response)
+                console.log(response)
                 console.log(respuesta)
             });
     };
