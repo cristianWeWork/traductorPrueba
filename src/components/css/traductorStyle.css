@@ -1,0 +1,16 @@
+.container {
+    height: 500px;
+    position: relative;
+    
+    
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    width: 500px;
+    top: 100%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 25px;
+  }
